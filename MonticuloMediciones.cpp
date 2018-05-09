@@ -195,12 +195,6 @@ void ed::MonticuloMediciones::statPorMes()const{
 			std::cin>>opcion;
 			std::cout<<RESET<<std::endl;
 			val=true;
-		}
-		if(!val){
-			std::cout<<BIRED<<"Error, el año "<<agno<<" introducido no está en el monticulo"<<RESET<<"\n"<<std::endl;
-			std::cin.ignore();
-			return;
-		}
 			
 		if(opcion>0 && opcion<13){
 			switch(opcion){
@@ -817,9 +811,14 @@ void ed::MonticuloMediciones::statPorMes()const{
 					
 				std::cin.ignore();
 				break;
-			}
-		}else
-			std::cout<<BIRED<<"Has introducido mal el mes"<<RESET<<std::endl;
+	}	
+		}
+			}else if(i==(size()-1) && opcion!=0)
+				std::cout<<BIRED<<"Has introducido mal el mes"<<RESET<<std::endl;
+		if(!val && i==(size()-1)){
+			std::cout<<BIRED<<"Error, el año "<<agno<<" introducido no está en el monticulo"<<RESET<<"\n"<<std::endl;
+			std::cin.ignore();
+		}
 	}
 }
 
