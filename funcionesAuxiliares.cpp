@@ -163,7 +163,7 @@ void ed::grabarMonticuloEnFichero(std::string const & nombreFichero, ed::Monticu
 	}else
 		value=false;
  	if(value)
-		std::cout<<BIGREEN<<"El fichero ha sido cargado con exito"<<RESET<<std::endl;
+		std::cout<<BIGREEN<<"El fichero ha sido grabado con exito"<<RESET<<std::endl;
 	else
 		std::cout<<BIRED<<"Error al cargar el fichero"<<RESET<<std::endl;
 
